@@ -30,6 +30,7 @@ VARIABLE
      --color-3: hsl(40, 92%, 95%);/*#fef6e6 */
      --color-4: rgb(80, 83, 83) ; /*#505353 */
      --color-5: #fef6e6;
+     --color-6: #F0F3FA;
      --body-bg: #242525;
 }
 
@@ -495,15 +496,22 @@ h1 {
 }
 
  /* ****************************************************************
-    skills
+    skills - project
 ***************************************************************** */
+#project{
+    background-color: var(--color-6);
+}
 
+.project {
+    justify-items: center;
+}
 .skills {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.skills_box {
+.skills_box,
+.project {
     display: grid; /* grid container */
     grid-template-columns: 1fr; /* 4 cols repeated, equal width */
     grid-gap: 2rem; /* vertical and horizontal gutter */
@@ -634,11 +642,14 @@ contact form
     align-items: center;
 }
 
-.contact-form h2 {
+h2 {
     font-size: 4rem;
     color: var(--color-1);
-    text-align: center;
     margin-bottom: 1rem;
+}
+
+.contact-form h2{
+    text-align: center;
 }
 
 .contact-form form {
