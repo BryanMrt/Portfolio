@@ -500,6 +500,8 @@ h1 {
 .project-img {
     height: 23rem;
     width: 28rem;
+    margin: 0 1rem;
+    border-radius: 0.5rem;
 }
 
 .project-box {
@@ -510,7 +512,7 @@ h1 {
     max-width: 100%;
     width:auto;
     height: auto;
-    padding: 2.4rem 3.2rem;
+    padding: 2.4rem 1.2rem;
     border-radius: 1rem;
     color: #fff;
 }
