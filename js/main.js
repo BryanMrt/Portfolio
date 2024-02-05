@@ -9,10 +9,24 @@ function toggleNav() {
     navigation.classList.toggle("active");
 }
 
-// CLICKED CLASS
+// activ nav
 
-const currentSpan = document.querySelector(".current span");
+const navLinkElements = document.querySelectorAll('.nav-link');
+const sectionElements = document.querySelectorAll('.section');
 
-addEventListener("click",function () {
-        currentSpan.classList.add("current");
-      })
+let currentSection =  'home';
+
+window.addEventListener('scroll', () => {
+  sectionElements.forEach(sectionElement => {
+    if(window.scrollY >= (sectionElement.offsetTop - sectionElement.clientHeight / 4)) {
+      currentSection = sectionElement.id;
+    }
+  });
+
+  navLinkElements.forEach(navLinkElement => {
+    if(navLinkElement.href.includes(currentSection)) {
+      document.querySelector('.active-nav').classList.remove('active-nav');
+      navLinkElement.classList.add('active-nav');
+    }
+  });
+});
