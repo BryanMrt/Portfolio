@@ -757,6 +757,14 @@ form button:hover {
     box-shadow: none;
 }
 
+.icon-link {
+    display: flex;
+    justify-content: center;
+}
+.icon-link a {
+    margin: 1rem 2rem;
+}
+
 @media screen and (max-width : 767px) {
     .timeline-items::before{
         left: 0.7rem;
