@@ -563,6 +563,9 @@ h3 {
     grid-template-columns: 1fr; /* 4 cols repeated, equal width */
     grid-gap: 2rem; /* vertical and horizontal gutter */
 }
+.intro_softskills p {
+    text-align: justify;
+}
 .box {
     display: flex;
     flex-direction: column;
@@ -821,6 +824,10 @@ form button:hover {
     }
     .project-box {
         flex-direction: row-reverse;
+    }
+    .intro_softskills p {
+        padding: 0 15rem 2rem;
+        font-size: 2rem;
     }
  }
  @media screen and (min-width: 1620px) {
