@@ -34,16 +34,6 @@ VARIABLE
      --body-bg: #242525;
 }
 
-:root{
-    --width-sixteen-cols: 1760px;
-    --width-default: 1320px;
-    --width-wide: 1600px;
-    --width-wider: 1800px;
-    --width-narrow: 1200px;
-    --width-narrower: 1000px;
-    --width-narrowest: 800px;
-    --width-full: 100%;
-}
 
 /* *****************************************************************
 GENERALITES
@@ -71,6 +61,7 @@ h2,
 h3, 
 h4 {
 	font-family: var(--font-2);
+    font-weight: 400;
 }
 
 a {
@@ -496,7 +487,7 @@ h1 {
 }
 
  /* ****************************************************************
-    skills - project
+    skills 
 ***************************************************************** */
 #project{
     background-color: var(--color-6);
@@ -505,6 +496,57 @@ h1 {
 .project {
     justify-items: center;
 }
+
+.project-img {
+    height: 23rem;
+    width: 28rem;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-4);
+    max-width: 100%;
+    width:auto;
+    height: auto;
+    padding: 2.4rem 3.2rem;
+    border-radius: 1rem;
+    color: #fff;
+}
+
+.demo {
+    border: 2px solid var(--color-6); 
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-3);
+}
+
+.demo:hover {
+    background-color: var(--color-6);
+    color: var(--body-bg);
+}
+
+.project-txt {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+.project-tags {
+    padding: 0 0.5rem;
+}
+
+
+ /* ****************************************************************
+    skills 
+***************************************************************** */
+
 .skills {
     display: flex;
     flex-direction: column;
@@ -738,6 +780,11 @@ form button:hover {
     .skills_box{
         grid-template-columns: repeat(2, 1fr);
     }
+    .project-img{
+        height: 35rem;
+        width: 40rem;
+    }
+
  }
  @media screen and (min-width: 1280px){
     .intro span::before {
@@ -754,6 +801,9 @@ form button:hover {
     }
     .skills_box {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .project-box {
+        flex-direction: row-reverse;
     }
  }
  @media screen and (min-width: 1620px) {
