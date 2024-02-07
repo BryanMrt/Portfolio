@@ -14,12 +14,13 @@ function toggleNav() {
 const navLinkElements = document.querySelectorAll('.nav-link');
 const sectionElements = document.querySelectorAll('.section');
 
-let currentSection =  'home';
+let currentSection =  'intro';
 
 window.addEventListener('scroll', () => {
   sectionElements.forEach(sectionElement => {
     if(window.scrollY >= (sectionElement.offsetTop - sectionElement.clientHeight / 4)) {
       currentSection = sectionElement.id;
+
     }
   });
 
