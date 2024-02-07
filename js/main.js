@@ -106,3 +106,9 @@ function showNotification(message) {
 }
 
 form.addEventListener("submit", handleSubmit);
+
+// SCROLL FIX
+
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0); // Scroll jusqu'en haut de la page
+});
