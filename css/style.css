@@ -787,6 +787,7 @@ form button:hover {
     margin: 1rem 2rem;
 }
 
+
 @media screen and (max-width : 767px) {
     .timeline-items::before{
         left: 0.7rem;

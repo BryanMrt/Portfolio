@@ -41,16 +41,20 @@ const notification = document.getElementById("notification");
 
 async function sendMessage(data) {
   try {
-    // Ici, vous pouvez remplacer l'URL par celle de votre service d'envoi de formulaire
-    const response = await fetch("URL_de_votre_service", {
-      method: "POST",
+    const response = await fetch(form.action, {
+      method: form.method,
       body: data,
       headers: {
         'Accept': 'application/json'
       }
     });
     if (response.ok) {
-      return "Thanks for your submission!";
+      // return "Votre message a été envoyé avec succès !";
+      Swal.fire({
+        title: "Good job!",
+        text: "Votre message a été envoyé avec succès !",
+        icon: "success"
+      });
     } else {
       const responseData = await response.json();
       if (responseData.hasOwnProperty('errors')) {
@@ -84,14 +88,14 @@ function checkInputs() {
   }
 }
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+async function handleSubmit(event) {
+  event.preventDefault();
   checkInputs();
 
   const data = new FormData(form);
   const message = await sendMessage(data);
   showNotification(message);
-});
+}
 
 function showNotification(message) {
   notification.textContent = message;
@@ -100,3 +104,5 @@ function showNotification(message) {
     notification.style.display = "none";
   }, 5000); // Disparition automatique après 5 secondes
 }
+
+form.addEventListener("submit", handleSubmit);
