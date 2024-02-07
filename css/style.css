@@ -682,6 +682,7 @@ section {
     padding: 10rem 0;
 }
 
+
 /* ****************************************************************
 contact form
 ***************************************************************** */
@@ -731,6 +732,14 @@ form .input-box {
     color: var(--color-2);
     margin: 1rem 0;
 }
+.field.error .item {
+    border-color: #d93025;
+}
+.field .item:focus {
+    /* outline: 2px solid #89434D; */
+    border-color: transparent;
+    background-color: #FCEAC5;
+}
 
 .field .error-txt{
     font-size: 1.6rem;
@@ -738,6 +747,9 @@ form .input-box {
     text-align-last: left;
     margin: -0.5rem 0 1rem;
     display: none;
+}
+.field.error .error-txt {
+    display: block;
 }
 
 form .textarea-field .item {
