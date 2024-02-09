@@ -486,7 +486,7 @@ h1 {
     
 }
 .about div p {
-    padding: 2rem 8rem;
+    padding: 2rem 2.5rem;
     font-size: 2.4rem;
     text-align: justify;
 }
@@ -567,6 +567,7 @@ h3 {
 }
 .intro_softskills p {
     text-align: justify;
+    padding: 0.5rem 2.5rem;
 }
 .box {
     display: flex;
@@ -818,6 +819,9 @@ form button:hover {
     }
     .contact-form form {
         width: 45rem;
+    }
+    .about div p {
+        padding: 2rem 8rem;
     }
 
  }
