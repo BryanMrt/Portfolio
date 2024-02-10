@@ -823,6 +823,9 @@ form button:hover {
     .about div p {
         padding: 2rem 8rem;
     }
+    .project {
+        /* width: 46.5rem; */
+    }
 
  }
  @media screen and (min-width: 1280px){
@@ -843,6 +846,9 @@ form button:hover {
     }
     .project-box {
         flex-direction: row-reverse;
+    }
+    .project {
+        /* width: 95rem; */
     }
     .intro_softskills p {
         padding: 0 15rem 2rem;
@@ -884,5 +890,11 @@ DESKTOP
       .portrait{
        /* justify-self: center;  */
         align-self: center;
+      }
+      .project-box {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-gap: 2rem;
+        justify-items: start;
       }
 }
