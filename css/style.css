@@ -645,7 +645,7 @@ experience
 
 .timeline-item:nth-child(odd){
     padding-right: calc(50% + 3rem);
-    text-align: right !important;
+    text-align: right;
 }
 .timeline-item:nth-child(even){
     padding-left: calc(50% + 3rem);
